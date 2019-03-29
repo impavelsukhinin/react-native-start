@@ -13,6 +13,8 @@ coverage
 node_modules/
 jspm_packages/
 typings/
+.jest/
+.expo/
 .npm
 .eslintcache
 .node_repl_history

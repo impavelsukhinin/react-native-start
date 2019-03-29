@@ -4,7 +4,14 @@
     "start": "expo start",
     "android": "expo start --android",
     "ios": "expo start --ios",
-    "eject": "expo eject"
+    "eject": "expo eject",
+    "prettier": "prettier --write \"src/**/*.{ts,tsx,js,jsx,json}\""
+  },
+  "prettier": {
+    "semi": false,
+    "singleQuote": true,
+    "trailingComma": "all",
+    "arrowParens": "always"
   },
   "dependencies": {
     "expo": "^32.0.0",
@@ -12,7 +19,14 @@
     "react-native": "https://github.com/expo/react-native/archive/sdk-32.0.0.tar.gz"
   },
   "devDependencies": {
-    "babel-preset-expo": "^5.0.0"
+    "@types/expo": "^32.0.9",
+    "@types/jest": "^24.0.11",
+    "@types/react": "^16.8.10",
+    "@types/react-native": "^0.57.42",
+    "@types/react-test-renderer": "^16.8.1",
+    "prettier": "^1.16.4",
+    "react-native-typescript-transformer": "^1.2.12",
+    "typescript": "^3.3.4000"
   },
   "private": true
 }

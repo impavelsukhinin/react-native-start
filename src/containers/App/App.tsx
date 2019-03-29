@@ -1,15 +1,7 @@
-import React from 'react';
+import React from 'react'
 import { StyleSheet, Text, View } from 'react-native'
 
-class App extends React.Component {
-	render() {
-		return (
-			<View style={styles.container}>
-				<Text>Open up App.js to start working on your app!</Text>
-			</View>
-		)
-	}
-}
+import Hello from 'src/components/Hello'
 
 const styles = StyleSheet.create({
 	container: {
@@ -17,7 +9,13 @@ const styles = StyleSheet.create({
 		alignItems: 'center',
 		justifyContent: 'center',
 		backgroundColor: '#fff',
-	}
+	},
 })
+
+const App = () => (
+	<View style={styles.container}>
+		<Hello />
+	</View>
+)
 
 export default App
