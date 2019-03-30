@@ -5,13 +5,8 @@
     "android": "expo start --android",
     "ios": "expo start --ios",
     "eject": "expo eject",
-    "prettier": "prettier --write \"src/**/*.{ts,tsx,js,jsx,json}\""
-  },
-  "prettier": {
-    "semi": false,
-    "singleQuote": true,
-    "trailingComma": "all",
-    "arrowParens": "always"
+    "prettier": "prettier --write \"src/**/*.{ts,tsx,js,jsx,json}\"",
+    "test": "jest"
   },
   "dependencies": {
     "expo": "^32.0.0",
@@ -24,9 +19,38 @@
     "@types/react": "^16.8.10",
     "@types/react-native": "^0.57.42",
     "@types/react-test-renderer": "^16.8.1",
+    "jest-expo": "^32.0.0",
     "prettier": "^1.16.4",
     "react-native-typescript-transformer": "^1.2.12",
+    "react-test-renderer": "^16.8.6",
+    "ts-jest": "^24.0.1",
     "typescript": "^3.3.4000"
+  },
+  "prettier": {
+    "semi": false,
+    "singleQuote": true,
+    "trailingComma": "all",
+    "arrowParens": "always"
+  },
+  "jest": {
+    "preset": "jest-expo",
+    "transform": {
+      "^.+\\.js$": "<rootDir>/node_modules/react-native/jest/preprocessor.js",
+      "^.+\\.tsx?$": "ts-jest"
+    },
+    "moduleDirectories": ["node_modules", "./"],
+    "testMatch": [
+      "**/__tests__/**/*.ts?(x)",
+      "**/?(*.)+(spec|test).ts?(x)"
+    ],
+    "moduleFileExtensions": ["js", "ts", "tsx"],
+    "globals": {
+      "ts-jest": {
+        "tsConfig": {
+          "jsx": "react"
+        }
+      }
+    }
   },
   "private": true
 }
