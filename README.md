@@ -7,6 +7,7 @@ Just begin 🤓
 #expo
 #prettier
 #react-native
+#jest
 
 ## Start
 
